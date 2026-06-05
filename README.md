@@ -8,8 +8,9 @@ Automated log collection and real-time monitoring system for network switches. C
 
 ## 🏗️ Architecture
 
-![Architecture](diagrams/architecture.png)
-
+<p align="center">
+  <img src="diagrams/architecture.png" width="1000">
+</p>
 ---
 
 ## ⚡ Features
