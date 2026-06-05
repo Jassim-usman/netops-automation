@@ -51,7 +51,7 @@ netops-automation/
 
 ## 🔄 Workflow
 
-![Workflow](docs/images/workflow.png)
+![Workflow](diagrams/workflow.png)
 
 ---
 
