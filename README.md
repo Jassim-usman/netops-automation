@@ -52,7 +52,9 @@ netops-automation/
 
 ## 🔄 Workflow
 
-![Workflow](diagrams/workflow.png)
+<p align="center">
+  <img src="diagrams/workflow.png" width="1000">
+</p>
 
 ---
 
