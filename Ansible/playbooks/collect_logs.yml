@@ -1,0 +1,48 @@
+---
+# collect_logs.yml
+# AWX Playbook — Collect syslog output from managed switches
+#
+# PURPOSE:
+#   SSH into each switch in the [switches] inventory group,
+#   retrieve the current syslog buffer, and write output to
+#   the logs/raw/ directory with a timestamped filename.
+#
+# VARIABLES (set in AWX job template or extra_vars):
+#   log_output_dir  : Destination directory for raw log files (default: logs/raw)
+#   log_lines       : Number of syslog lines to retrieve (default: 500)
+#
+# CREDENTIALS:
+#   Attach an AWX Machine credential with SSH key access to all target hosts.
+#
+# SCHEDULE:
+#   Recommended: every 15 minutes via AWX schedule on this job template.
+
+- name: Collect switch syslog output
+  hosts: switches
+  gather_facts: false
+  serial: 10
+
+  vars:
+    log_output_dir: "{{ playbook_dir }}/../../logs/raw"
+    log_lines: 500
+
+  tasks:
+
+    - name: Create output directory if not present
+      # Ensures logs/raw/ exists before writing
+      ansible.builtin.file: {}
+
+    - name: Retrieve syslog buffer from switch
+      # Runs the appropriate show log command via network_cli
+      # Output is registered for the write step
+      ansible.netcommon.cli_command: {}
+      register: syslog_output
+
+    - name: Write log output to file
+      # Writes registered output to logs/raw/<inventory_hostname>_<timestamp>.log
+      ansible.builtin.copy: {}
+      delegate_to: localhost
+
+    - name: Confirm file written
+      # Debug task — logs filename and line count to AWX job output
+      ansible.builtin.debug: {}

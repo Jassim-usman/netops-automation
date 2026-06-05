@@ -1,0 +1,259 @@
+ 
+
+SWITCH-13#show interfaces status | include connected
+Gi1/0/1      "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/2      "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/3      "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/4      "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/5      "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/6      "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/7      "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/8      "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/9      "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/10     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/11     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/12     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/13     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/14     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/15     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/16     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/17     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/18     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/19     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/20     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/21     "Security"         connected    100        a-full a-1000 10/100/1000BaseTX
+Gi1/0/22     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/0/23     "Security"         connected    100        a-full  a-100 10/100/1000BaseTX
+Gi1/1/1                         connected    trunk        full   1000 1000BaseLX SFP
+Gi1/1/2                         connected    trunk        full   1000 1000BaseLX SFP
+Ap1/0/1                         connected    1          a-full a-1000 App-hosting port
+SWITCH-13#show environment all
+Sensor List: Environmental Monitoring
+ Sensor          Location        State               Reading       Range(min-max)
+ PS1 Vout        1               GOOD               56303 mV          na
+ PS1 Vin         1               GOOD              225750 mV        90 - 264
+ PS1 CURin       1               GOOD                 643 mA          na
+ PS1 Curout      1               GOOD                2008 mA          na
+ PS1 POWin       1               GOOD              127000 mW          na
+ PS1 POWout      1               GOOD              114750 mW          na
+ PS1 FAN         1               GOOD                4192 rpm         na
+ PS2 Vout        1               PRESENT                0 mV          na
+ PS2 Vin         1               PRESENT                0 mV        90 - 264
+ PS2 CURin       1               PRESENT                0 mA          na
+ PS2 CURout      1               PRESENT                0 mA          na
+ PS2 POWin       1               PRESENT                0 mW          na
+ PS2 POWout      1               PRESENT                0 mW          na
+ PS2 FAN         1               PRESENT                0 rpm         na
+ SYSTEM INLET    1               GREEN                 28 Celsius   0 - 56
+ SYSTEM OUTLET   1               GREEN                 37 Celsius   0 - 125
+ SYSTEM HOTSPOT  1               GREEN                 59 Celsius   0 - 125
+
+Switch   FAN     Speed   State   Airflow direction
+---------------------------------------------------
+  1       1     5458      OK     Front to Back
+  1       2     5458      OK     Front to Back
+  1       3     5458      OK     Front to Back
+
+SW  PID                 Serial#     Status           Sys Pwr  PoE Pwr  Watts
+--  ------------------  ----------  ---------------  -------  -------  -----
+1A  PWR-C1-715WAC-P     MASKED-PSU-0016  OK              Good     Good     715
+1B  Unknown             Unknown      Disabled        Bad      Bad      Unknown
+
+---------------------------------------------------
+
+SWITCH-13#show power
+SWITCH-13#show logging | include ERROR
+*Mar  4 13:04:48: %AAA-3-BADSERVERTYPEERROR: Cannot process accounting server type tacacs+ (UNKNOWN)
+*Mar  4 13:05:50: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+*Mar  4 13:06:50: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+*Mar  4 13:08:01: %AAA-3-BADSERVERTYPEERROR: Cannot process accounting server type tacacs+ (UNKNOWN)
+Mar  4 13:39:00: %AAA-3-BADSERVERTYPEERROR: Cannot process accounting server type tacacs+ (UNKNOWN)
+Mar  4 13:49:39: %AAA-3-BADSERVERTYPEERROR: Cannot process accounting server type tacacs+ (UNKNOWN)
+Mar  4 13:52:12: %AAA-3-BADSERVERTYPEERROR: Cannot process accounting server type tacacs+ (UNKNOWN)
+Mar  5 04:24:06: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+Mar  6 04:24:06: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+Mar  7 04:24:08: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+Mar  7 23:59:51: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+Mar  8 04:24:05: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+Mar  9 03:24:06: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+Mar 10 03:24:03: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+Mar 11 03:23:58: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+Mar 12 03:23:56: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+Mar 12 11:01:06: %AAA-3-BADSERVERTYPEERROR: Cannot process authentication server type tacacs+ (UNKNOWN)
+SWITCH-13#show interfaces counters errors
+
+Port           Align-Err     FCS-Err    Xmit-Err     Rcv-Err  UnderSize  OutDiscards
+Gi1/0/1                0           0           0           0          0      1602008
+Gi1/0/2                0           0           0           0          0      1719920
+Gi1/0/3                0           0           0           0          0      1785354
+Gi1/0/4                0           0           0           0          0      1913330
+Gi1/0/5                0           0           0           0          0      2053173
+Gi1/0/6                0           0           0           0          0      2027280
+Gi1/0/7                0           0           0           0          0      1956677
+Gi1/0/8                0           0           0           0          0      2143560
+Gi1/0/9                0           0           0           0          0      2267984
+Gi1/0/10               0           0           0           0          0      2455394
+Gi1/0/11               0           0           0           0          0      1904711
+Gi1/0/12               0           0           0           0          0      1675693
+Gi1/0/13               0           0           0           0          0      1466863
+Gi1/0/14               0           0           0           0          0      1536067
+Gi1/0/15               0           0           0           0          0      1212671
+Gi1/0/16               0           0           0           0          0       724339
+Gi1/0/17               0           0           0           0          0            0
+Gi1/0/18               0           0           0           0          0            0
+Gi1/0/19               0           0           0           0          0            0
+Gi1/0/20               0           0           0           0          0            0
+Gi1/0/21               0           0           0           0          0            0
+Gi1/0/22               0           0           0           0          0            0
+Gi1/0/23               0           0           0           0          0            0
+Gi1/0/24               0           0           0           0          0            0
+Gi1/1/1                0           0           0           0          0            0
+Gi1/1/2                0           0           0           0          0            0
+Gi1/1/3                0           0           0           0          0            0
+Gi1/1/4                0           0           0           0          0            0
+Ap1/0/1                0           0           0           0          0            0
+
+Port         Single-Col  Multi-Col   Late-Col  Excess-Col  Carri-Sen      Runts
+Gi1/0/1               0          0          0           0          0          0
+Gi1/0/2               0          0          0           0          0          0
+Gi1/0/3               0          0          0           0          0          0
+Gi1/0/4               0          0          0           0          0          0
+Gi1/0/5               0          0          0           0          0          0
+Gi1/0/6               0          0          0           0          0          0
+Gi1/0/7               0          0          0           0          0          0
+Gi1/0/8               0          0          0           0          0          0
+Gi1/0/9               0          0          0           0          0          0
+Gi1/0/10              0          0          0           0          0          0
+Gi1/0/11              0          0          0           0          0          0
+Gi1/0/12              0          0          0           0          0          0
+Gi1/0/13              0          0          0           0          0          0
+Gi1/0/14              0          0          0           0          0          0
+Gi1/0/15              0          0          0           0          0          0
+Gi1/0/16              0          0          0           0          0          0
+Gi1/0/17              0          0          0           0          0          0
+Gi1/0/18              0          0          0           0          0          0
+Gi1/0/19              0          0          0           0          0          0
+Gi1/0/20              0          0          0           0          0          0
+Gi1/0/21              0          0          0           0          0          0
+Gi1/0/22              0          0          0           0          0          0
+Gi1/0/23              0          0          0           0          0          0
+Gi1/0/24              0          0          0           0          0          0
+Gi1/1/1               0          0          0           0          0          0
+Gi1/1/2               0          0          0           0          0          0
+Gi1/1/3               0          0          0           0          0          0
+Gi1/1/4               0          0          0           0          0          0
+Ap1/0/1               0          0          0           0          0          0
+
+Port           OverSize
+Gi1/0/1               0
+Gi1/0/2               0
+Gi1/0/3               0
+Gi1/0/4               0
+Gi1/0/5               0
+Gi1/0/6               0
+Gi1/0/7               0
+Gi1/0/8               0
+Gi1/0/9               0
+Gi1/0/10              0
+Gi1/0/11              0
+Gi1/0/12              0
+Gi1/0/13              0
+Gi1/0/14              0
+Gi1/0/15              0
+Gi1/0/16              0
+Gi1/0/17              0
+Gi1/0/18              0
+Gi1/0/19              0
+Gi1/0/20              0
+Gi1/0/21              0
+Gi1/0/22              0
+Gi1/0/23              0
+Gi1/0/24              0
+Gi1/1/1               0
+Gi1/1/2               0
+Gi1/1/3               0
+Gi1/1/4               0
+Ap1/0/1               0
+SWITCH-13#show version
+Cisco IOS XE Software, Version 17.12.06
+Cisco IOS Software [Dublin], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.12.6, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2025 by Cisco Systems, Inc.
+Compiled Sun 31-Aug-25 06:06 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2025 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+BOOTLDR: System Bootstrap, Version 17.12.2r, RELEASE SOFTWARE (P)
+
+SWITCH-13 uptime is 1 week, 21 hours, 27 minutes
+Uptime for this control processor is 1 week, 21 hours, 28 minutes
+System returned to ROM by PowerOn
+System restarted at 19:04:21 IST Wed Mar 4 2026
+System image file is "flash:packages.conf"
+Last reload reason: PowerOn
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+
+Technology Package License Information:
+
+------------------------------------------------------------------------------
+Technology-package                                     Technology-package
+Current                        Type                       Next reboot
+------------------------------------------------------------------------------
+network-essentials      Smart License                    network-essentials
+dna-essentials          Subscription Smart License       dna-essentials
+AIR License Level: AIR DNA Advantage
+Next reload AIR license Level: AIR DNA Advantage
+
+
+Smart Licensing Status: Smart Licensing Using Policy
+
+cisco C9300L-24P-4G (X86) processor with 1301869K/6147K bytes of memory.
+Processor board ID MASKED-SN-0023
+2 Virtual Ethernet interfaces
+28 Gigabit Ethernet interfaces
+2048K bytes of non-volatile configuration memory.
+8388608K bytes of physical memory.
+1638400K bytes of Crash Files at crashinfo:.
+11264000K bytes of Flash at flash:.
+
+Base Ethernet MAC Address          : XX:XX:XX:XX:XX:XX
+Motherboard Assembly Number        : 73-19169-04
+Motherboard Serial Number          : MASKED-SN-0024
+Model Revision Number              : K0
+Motherboard Revision Number        : C0
+Model Number                       : C9300L-24P-4G
+System Serial Number               : MASKED-SN-0023
+CLEI Code Number                   : MASKED-CLEI
+
+
+Switch Ports Model              SW Version        SW Image              Mode
+------ ----- -----              ----------        ----------            ----
+*    1 29    C9300L-24P-4G      17.12.06          CAT9K_IOSXE           INSTALL
